@@ -43,8 +43,6 @@ public class BestSellerBooksRecyclerViewAdapter extends RecyclerView.Adapter<Bes
         holder.mBookDescription.setText(books.get(position).description);
         holder.mRanking.setText(String.valueOf(books.get(position).rank));
 
-        System.out.println(books.get(position).rank);
-        System.out.println("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,8 +59,6 @@ public class BestSellerBooksRecyclerViewAdapter extends RecyclerView.Adapter<Bes
                 .load(bestSellerBook.bookImageUrl)
                 .centerInside()
                 .into(holder.mBookImage);
-
-        System.out.println(bestSellerBook.bookImageUrl);
     }
 
     @Override
